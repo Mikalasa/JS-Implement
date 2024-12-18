@@ -15,3 +15,4 @@ function INSERT_SUBTITLE(title) {
     const element = document.querySelector('#page-subtitle')
     element.innerHTML = title
 }
+const log = console.log.bind(console)
