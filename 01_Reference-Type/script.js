@@ -73,7 +73,7 @@ function objShallowCopy() {
     log("objA: ", objA) // { a: 3, b: 2 }
     log("objB: ", objB) // { a: 4, b: 2 }
 
-    console.group("shallow copy apply to nest object")
+    log("shallow copy apply to nest object")
     log("\n\n-- but, when shallow copy apply to nest object, it will fail")
     log("objC: e in objC was 3", objC)
     let objD = Object.assign({}, objC)
@@ -82,7 +82,6 @@ function objShallowCopy() {
     log("change objD's d's e = 88")
     log("objC: ", objC) // e = 88
     log("objD: ", objD)
-    console.groupEnd()
 }
 
 
@@ -95,7 +94,7 @@ function objDeepCopy() {
         },
     }
     log('objA: ', objA)
-    log('using JSON.parse(JSON.stringify(objA)) to objB')
+    log("using JSON.parse(JSON.stringify(objA)) to objB")
     let objB = JSON.parse(JSON.stringify(objA))
     objB.a = 4
     objB.d.e = 4
@@ -116,20 +115,21 @@ function testConst() {
 
 
 
-const functions = [
-    [primitiveChange, 'primitiveChange'],
-    [arrayChange, 'arrayChange'],
-    [arrayShallowCopy, 'arrayShallowCopy'],
-    [objectChange, 'objectChange'],
-    [objShallowCopy, 'objShallowCopy'],
-    [objDeepCopy, 'objDeepCopy'],
-    [testConst, 'testConst'],
-]
 
-function __MAIN() {
+(function() {
+    const functions = {
+        "primitiveChange": primitiveChange,
+        "arrayChange": arrayChange,
+        "arrayShallowCopy": arrayShallowCopy,
+        "objectChange": objectChange,
+        "objShallowCopy": objShallowCopy,
+        "objDeepCopy": objDeepCopy,
+        "testConst": testConst,
+    }
+    bindFunctionSelection(functions)
     INSERT_SUBTITLE("01: Reference Type")
-    ENGINE(functions).then(r => (console.log('%c ALL DONE !', 'color: Black; font-size: 20px;')))
-}
+})();
 
-__MAIN()
+
+
 

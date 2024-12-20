@@ -1,0 +1,35 @@
+h1 {
+    color: red;
+    text-align: center;
+}
+h2 {
+    color: blue;
+    text-align: center;
+}
+#page-title {
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+
+
+.code-output-box {
+    width: 90%;
+}
+.console-output-box {
+    width: 80%;
+}
+.display-box {
+    max-height: 80vh;
+    min-height: 400px;
+    overflow: auto;
+    background: #0d1117;
+    border-radius: 0.5rem;
+}
+.language-javascript {
+    border-radius: 0.5rem;
+}
+.plaintext {
+    border-radius: 0.5rem;
+}

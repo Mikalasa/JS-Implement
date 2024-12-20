@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XY Lab</title>
+    <!-- import Highlight.js style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+    <!-- import Highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="page-title">
+        <h1>Welcome to Javascript Implement</h1>
+        <h2 id="page-subtitle">Ready</h2>
+    </div>
+    <div >
+        <label for="script-selection">Choose an option:</label>
+        <select id="script-selection" name="options"><option value="none selected">none selected</option></select>
+    </div>
+    <div >
+        <label for="function-selection">Choose an option:</label>
+        <select id="function-selection" name="options"><option value="none selected">none selected</option></select>
+    </div>
+    <section class="output-container">
+        <div class="code-output-box display-box">
+        <pre>
+            <code class="language-javascript"></code>
+        </pre>
+        </div>
+        <div class="console-output-box display-box">
+        <pre>
+            <code class="plaintext"></code>
+        </pre>
+        </div>
+    </section>
+
+    <script src="utility/utility.js"></script>
+    <script src="utility/engine.js"></script>
+</body>
+</html>
