@@ -1,18 +1,56 @@
+/* general.css */
+/* Reset Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
+    font-family: 'Roboto', Arial, sans-serif;
     background-color: rgb(33, 33, 33);
+    color: #f0f0f0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
 }
 
+/* Header */
+header {
+    text-align: center;
+    padding: 2rem 0;
+    height: 20%;
+    max-height: 200px;
+}
 
+main {
+    flex: 1;
+}
+
+/* Dropdowns */
+.selection-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+/* Output Section */
 .output-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: start;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
     justify-items: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #222;
+    color: #f0f0f0;
 }

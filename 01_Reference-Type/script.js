@@ -74,7 +74,7 @@ function objShallowCopy() {
     log("objB: ", objB) // { a: 4, b: 2 }
 
     log("shallow copy apply to nest object")
-    log("\n\n-- but, when shallow copy apply to nest object, it will fail")
+    log("-- but, when shallow copy apply to nest object, it will fail")
     log("objC: e in objC was 3", objC)
     let objD = Object.assign({}, objC)
     log('using Object.assign({}, objC) to objD')
@@ -113,7 +113,11 @@ function testConst() {
     console.warn("Uncaught (in promise) TypeError: Assignment to constant variable.")
 }
 
-
+function test() {
+    let obj = {a: 1}
+    let the_proto = obj.__proto__
+    log("the_proto: ", the_proto)
+}
 
 
 (function() {
@@ -125,9 +129,10 @@ function testConst() {
         "objShallowCopy": objShallowCopy,
         "objDeepCopy": objDeepCopy,
         "testConst": testConst,
+        "test": test,
     }
     bindFunctionSelection(functions)
-    INSERT_SUBTITLE("01: Reference Type")
+    INSERT_SUBTITLE("01: Reference in JavaScript")
 })();
 
 

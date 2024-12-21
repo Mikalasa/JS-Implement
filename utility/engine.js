@@ -66,6 +66,7 @@ function scriptSelection(scripts) {
             const selected = this.value;
             if (selected === 'none selected') {
                 console.log('no scripts is loaded');
+                updateFunctionSelection()
             } else {
                 console.log(`Selected script: ${selected}`);
                 const selectedScriptPath = scripts[selected];
@@ -77,7 +78,7 @@ function scriptSelection(scripts) {
 }
 
 function bindFunctionSelection(functions) {
-    console.log(functions)
+    // console.log(functions)
     const selectEle = document.querySelector('#function-selection')
     if (selectEle.childElementCount === 1) {
         Object.keys(functions).forEach(key => {
@@ -95,7 +96,7 @@ function bindFunctionSelection(functions) {
                 console.log(`Selected function: ${selected}`);
                 const logOutput = document.querySelector('.console-output-box code.plaintext');
                 logOutput.textContent = '';
-                console.log(functions[selected])
+                // console.log(functions[selected])
                 executeFunction(functions[selected], selected);
             }
         });
