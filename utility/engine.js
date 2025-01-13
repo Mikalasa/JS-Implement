@@ -2,6 +2,7 @@
 const scripts = {
     "01_Reference-Type": "./01_Reference-Type/Script.js",
     "02_Var-in-For": "./02_Var-in-For/Script.js",
+    "03_Object": "./03_Object/Script.js",
 }
 
 const State = {
